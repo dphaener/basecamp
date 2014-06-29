@@ -1,3 +1,5 @@
+require 'virtus'
+
 module Basecamp
   class Todo
     include Virtus.model
@@ -29,8 +31,8 @@ module Basecamp
       {
           :content => @content,
           :due_at => @due_at,
-          :assignee => @assignee.blank? ? nil : @assignee.to_hash,
-          :position => @position.blank? ? 99  : @position,
+          :assignee => @assignee.empty? ? nil : @assignee.to_hash,
+          :position => @position ? 99  : @position,
           :completed => @completed
       }.to_json
     end

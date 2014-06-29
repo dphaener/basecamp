@@ -1,3 +1,6 @@
+require 'virtus'
+require 'oauth2'
+
 # Adapted from https://github.com/birarda/logan/blob/master/lib/logan/client.rb
 
 module Basecamp

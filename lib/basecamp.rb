@@ -4,6 +4,7 @@ require 'basecamp/error'
 require 'basecamp/client'
 require 'basecamp/todo'
 require 'basecamp/todo_list'
+require 'virtus'
 
 module Basecamp
   class << self

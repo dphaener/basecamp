@@ -1,3 +1,5 @@
+require 'oauth2'
+
 module Basecamp
   class OAuth
 
@@ -24,9 +26,9 @@ module Basecamp
     # The parameters hash to pass into the OAuth2 client
     def client_params
       {
-          :site => "https://launchpad.37signals.com",
-          :token_url => "/authorization/token?type=refresh&refresh_token=#{refresh_token}",
-          :authorize_url => "/authorization/new"
+        :site => "https://launchpad.37signals.com",
+        :token_url => "/authorization/token?type=refresh&refresh_token=#{refresh_token}",
+        :authorize_url => "/authorization/new"
       }
     end
 
@@ -45,8 +47,8 @@ module Basecamp
     def get_new_token
       response = client.auth_code.get_token(nil)
       {
-          :token => response.token,
-          :expires_at => Time.at(response.expires_at)
+        :token => response.token,
+        :expires_at => Time.at(response.expires_at)
       }
 
     rescue OAuth2::Error => ex

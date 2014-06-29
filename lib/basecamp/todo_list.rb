@@ -1,3 +1,4 @@
+require 'virtus'
 require 'basecamp/todo'
 
 module Basecamp
