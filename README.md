@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/dphaener/basecamp.png)](https://codeclimate.com/github/dphaener/basecamp)
+
 # Basecamp
 
 This gem provides a simple wrapper for the Basecamp API (New, version 1) using OAuth authentication only.
