@@ -30,5 +30,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'webmock'
 
   spec.add_runtime_dependency 'virtus', '~> 1.0'
-  spec.add_runtime_dependency 'oauth2', '~> 0.9'
+  spec.add_runtime_dependency 'oauth2', '~> 0.8'
 end
