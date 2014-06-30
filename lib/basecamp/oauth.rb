@@ -37,20 +37,14 @@ module Basecamp
       @client ||= OAuth2::Client.new(client_id, client_secret, client_params)
     end
 
-    # We have to create an access token object using the current valid token in order to
-    # be able to send requests to the api
-    def access_token
-      @access_token ||= OAuth2::AccessToken.new(client, token)
-    end
-
     # Requests a new token from the Basecamp servers
     def get_new_token
       response = client.auth_code.get_token(nil)
+
       {
         :token => response.token,
         :expires_at => Time.at(response.expires_at)
       }
-
     rescue OAuth2::Error => ex
       Basecamp::Error.new(ex.message).raise_exception
     end
@@ -61,6 +55,14 @@ module Basecamp
       JSON.parse(response.body)["accounts"]
     rescue => ex
       Basecamp::Error.new(ex.message).raise_exception
+    end
+
+  private
+
+    # We have to create an access token object using the current valid token in order to
+    # be able to send requests to the api
+    def access_token
+      @access_token ||= OAuth2::AccessToken.new(client, token)
     end
   end
 end
