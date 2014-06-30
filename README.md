@@ -1,6 +1,7 @@
 # Basecamp
 
-TODO: Write a gem description
+This gem provides a simple wrapper for the Basecamp API (New, version 1) using OAuth authentication only.
+Currently it only supports
 
 ## Installation
 

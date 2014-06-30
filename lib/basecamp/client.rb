@@ -55,7 +55,18 @@ module Basecamp
       response = access_token.get("#{base_uri}/todolists.json")
       [].tap do |ary|
         response.parsed.each do |list|
-          ary << Basecamp::TodoList.new(list.merge(:account_id => account_id))
+          ary << Basecamp::TodoList.new(list.merge(:account_id => account_id, :token => token))
+        end
+      end
+    rescue => ex
+      Basecamp::Error.new(ex.message).raise_exception
+    end
+
+    def projects
+      response = access_token.get("#{base_uri}/projects.json")
+      [].tap do |ary|
+        response.parsed.each do |project|
+          arry < Basecamp::Project.new(project.merge(:account_id => account_id, :token => token))
         end
       end
     rescue => ex
