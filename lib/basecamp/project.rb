@@ -1,7 +1,8 @@
-include 'virtus'
+require 'virtus'
 
 module Basecamp
   class Project
+    include Virtus.model
 
     attribute :id, Integer
     attribute :name, String
@@ -67,7 +68,7 @@ module Basecamp
     # @param [Basecamp::TodoList] todo_list todo list instance to be created
     # @return [Basecamp::TodoList] todo list instance from Basecamp API response
     def create_todolist(todo_list)
-      response = client.access_token.post("#{client.base_uri}/projects/#{id}/todolists.json" do |request|
+      response = client.access_token.post("#{client.base_uri}/projects/#{id}/todolists.json") do |request|
         request.body = todo_list.post_json
         request.headers['Content-Type'] = 'application/json'
       end

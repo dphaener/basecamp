@@ -11,7 +11,6 @@ module Basecamp
     attribute :token, String
     attribute :refresh_token, String
 
-
     # The client_secret that is defined in the initializer file
     attr_reader :client_secret
 
@@ -66,11 +65,19 @@ module Basecamp
       response = access_token.get("#{base_uri}/projects.json")
       [].tap do |ary|
         response.parsed.each do |project|
-          arry < Basecamp::Project.new(project.merge(:account_id => account_id, :token => token))
+          ary << Basecamp::Project.new(project.merge(:account_id => account_id, :token => token))
         end
       end
     rescue => ex
       Basecamp::Error.new(ex.message).raise_exception
     end
+    
+    def me 
+      response = access_token.get("#{base_uri}/people/me.json").parsed
+      Basecamp::Person.new(:account_id => account_id, :token => token, :name => response["name"], :email_address => response["email_address"])
+    rescue => ex
+      Basecamp::Error.new(ex.message).raise_exception
+    end
+    
   end
 end
