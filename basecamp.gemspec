@@ -29,6 +29,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'shoulda-matchers'
   spec.add_development_dependency 'webmock'
 
-  spec.add_runtime_dependency 'virtus'
-  spec.add_runtime_dependency 'oauth2'
+  spec.add_runtime_dependency 'virtus', '~> 1.0'
+  spec.add_runtime_dependency 'oauth2', '~> 0.9'
 end

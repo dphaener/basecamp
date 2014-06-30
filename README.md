@@ -1,7 +1,7 @@
 # Basecamp
 
 This gem provides a simple wrapper for the Basecamp API (New, version 1) using OAuth authentication only.
-Currently it only supports
+Currently it only supports functionality for Todos, TodoLists and Projects
 
 ## Installation
 
@@ -19,7 +19,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Rails
+
+Add the following to a file in your config directory
+
+    Basecamp.configure do |c|
+      c.client_id = <your basecamp client_id>
+      c.client_secret = <your basecamp secret>
+    end
 
 ## Contributing
 
