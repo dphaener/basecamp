@@ -28,6 +28,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'shoulda'
   spec.add_development_dependency 'shoulda-matchers'
   spec.add_development_dependency 'webmock'
+  spec.add_development_dependency 'coveralls'
+  spec.add_development_dependency 'vcr'
 
   spec.add_runtime_dependency 'virtus', '~> 1.0'
   spec.add_runtime_dependency 'oauth2', '~> 0.8'

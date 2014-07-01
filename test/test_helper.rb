@@ -1,6 +1,8 @@
 require 'simplecov'
+require 'coveralls'
 SimpleCov.command_name 'Unit Tests'
 SimpleCov.start
+Coveralls.wear!
 
 require File.expand_path('../../lib/basecamp', __FILE__)
 
