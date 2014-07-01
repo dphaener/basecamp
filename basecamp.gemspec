@@ -30,6 +30,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'webmock'
   spec.add_development_dependency 'vcr'
   spec.add_development_dependency 'debugger'
+  spec.add_development_dependency 'codeclimate-test-reporter'
 
   spec.add_runtime_dependency 'virtus', '~> 1.0'
   spec.add_runtime_dependency 'oauth2', '~> 0.8'
