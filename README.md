@@ -1,4 +1,5 @@
 [![Code Climate](https://codeclimate.com/github/dphaener/basecamp.png)](https://codeclimate.com/github/dphaener/basecamp)
+[![Build Status](https://travis-ci.org/dphaener/basecamp.svg?branch=master)](https://travis-ci.org/dphaener/basecamp)
 
 # Basecamp
 

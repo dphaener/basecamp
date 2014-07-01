@@ -4,6 +4,9 @@ rvm:
   - 2.0.0
   - 2.1.0
 
+env:
+  CODECLIMATE_REPO_TOKEN=42ec4753b529933bca6e4c099b41930ce4d37c763363953fdfe8dff884c883cd
+
 addons:
   code_climate:
     repo_token: 42ec4753b529933bca6e4c099b41930ce4d37c763363953fdfe8dff884c883cd
