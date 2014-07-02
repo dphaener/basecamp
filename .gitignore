@@ -3,9 +3,6 @@
 .bundle
 .config
 .yardoc
-.coveralls.yml
-.travis.yml
-.gitignore
 Gemfile.lock
 InstalledFiles
 _yardoc

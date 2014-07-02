@@ -29,6 +29,9 @@ module Basecamp
           :token => token
         }))
       end
+
+    rescue OAuth2::Error => ex
+      Basecamp::Error.new(ex.message).raise_exception
     end
 
     # get completed todo lists for this project from Basecamp API
