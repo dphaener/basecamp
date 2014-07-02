@@ -75,7 +75,7 @@
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.14742015" vertical-offset="0" max-vertical-offset="407">
-              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+              <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -498,7 +498,11 @@
       <created>1404275960129</created>
       <updated>1404275960129</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Fixed travis.yml file">
+      <created>1404276047077</created>
+      <updated>1404276047077</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -577,7 +581,8 @@
     <MESSAGE value="Added travis badge and code climate env variable" />
     <MESSAGE value="Added config files back for travis and coveralls&#10;Added tests for project object&#10;" />
     <MESSAGE value="Added config files back for travis and coveralls&#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added config files back for travis and coveralls&#10;&#10;" />
+    <MESSAGE value="Fixed travis.yml file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed travis.yml file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -957,7 +962,7 @@
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14742015" vertical-offset="0" max-vertical-offset="407">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
           <folding />
         </state>
       </provider>
