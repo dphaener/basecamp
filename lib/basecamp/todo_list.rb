@@ -34,6 +34,13 @@ module Basecamp
       super(params)
     end
 
+    def post_json
+      {
+        :name => name,
+        :description => description
+      }.to_json
+    end
+
     def client
       @client = Basecamp::Client.new(:account_id => account_id, :token => token)
     end

@@ -1,5 +1,6 @@
 [![Code Climate](https://codeclimate.com/github/dphaener/basecamp.png)](https://codeclimate.com/github/dphaener/basecamp)
 [![Build Status](https://travis-ci.org/dphaener/basecamp.svg?branch=master)](https://travis-ci.org/dphaener/basecamp)
+[![Coverage Status](https://coveralls.io/repos/dphaener/basecamp/badge.png?branch=master)](https://coveralls.io/r/dphaener/basecamp?branch=master)
 
 # Basecamp
 

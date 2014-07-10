@@ -45,6 +45,9 @@ module Basecamp
           :token => token
         }))
       end
+
+    rescue OAuth2::Error => ex
+      Basecamp::Error.new(ex.message).raise_exception
     end
 
     # get both active and completed todo lists for this project from Basecamp API
@@ -64,6 +67,9 @@ module Basecamp
         :account_id => account_id,
         :token => token
       }))
+
+    rescue OAuth2::Error => ex
+      Basecamp::Error.new(ex.message).raise_exception
     end
 
     # create a todo list in this project via Basecamp API
@@ -80,6 +86,9 @@ module Basecamp
         :account_id => account_id,
         :token => token
       }))
+
+    rescue OAuth2::Error => ex
+      Basecamp::Error.new(ex.message).raise_exception
     end
 
     # TODO: Add the person object so we can add these routes
