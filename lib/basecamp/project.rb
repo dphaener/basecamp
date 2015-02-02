@@ -6,6 +6,14 @@ module Basecamp
 
     attribute :id, Integer
     attribute :name, String
+    attribute :description, String
+    attribute :updated_at, DateTime
+    attribute :url, String
+    attribute :archived, Boolean
+    attribute :starred, Boolean
+    attribute :trashed, Boolean
+    attribute :is_client_project, Boolean
+    attribute :color, String
     attribute :account_id, Integer
     attribute :token, String
 

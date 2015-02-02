@@ -71,13 +71,30 @@ module Basecamp
     rescue => ex
       Basecamp::Error.new(ex.message).raise_exception
     end
-    
-    def me 
-      response = access_token.get("#{base_uri}/people/me.json").parsed
-      Basecamp::Person.new(:account_id => account_id, :token => token, :name => response["name"], :email_address => response["email_address"])
+
+    def people
+      response = access_token.get("#{base_uri}/people.json")
+      [].tap do |ary|
+        response.parsed.each do |person|
+          ary << Basecamp::Person.new(person.merge(:account_id => account_id, :token => token))
+        end
+      end
     rescue => ex
       Basecamp::Error.new(ex.message).raise_exception
     end
-    
+
+    def me 
+      response = access_token.get("#{base_uri}/people/me.json").parsed
+      Basecamp::Person.new(response.merge(:account_id => account_id, :token => token))
+    rescue => ex
+      Basecamp::Error.new(ex.message).raise_exception
+    end
+
+    def person(id)
+      response = access_token.get("#{base_uri}/people/#{id}.json").parsed
+      Basecamp::Person.new(response.merge(:account_id => account_id, :token => token))
+    rescue => ex
+      Basecamp::Error.new(ex.message).raise_exception
+    end
   end
 end

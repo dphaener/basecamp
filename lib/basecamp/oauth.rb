@@ -52,7 +52,7 @@ module Basecamp
     # Returns an array of all basecamp accounts associated with this token
     def get_accounts
       response = access_token.get("https://launchpad.37signals.com/authorization.json")
-      JSON.parse(response.body)["accounts"]
+      JSON.parse(response.body)["accounts"].select { |account| account["product"] == "bcx" }
     rescue => ex
       Basecamp::Error.new(ex.message).raise_exception
     end
